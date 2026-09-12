@@ -1,14 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- user-scalable=no でブラウザのピンチズームを無効化 (表のみカスタム制御) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>シフトントン</title>
     <meta name="description" content="役割や時間を設定してシフト表を作成し、PDF・画像として出力できるiPad向けWebアプリです。" />
     <meta property="og:title" content="シフトントン" />
     <meta property="og:description" content="役割や時間を設定してシフト表を作成し、PDF・画像として出力できるiPad向けWebアプリです。" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    <!-- PWA / iOS ホーム画面対応 -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="シフトントン" />
+    <meta name="theme-color" content="#3b82f6" />
     <link rel="icon" type="image/jpeg" href="./logo.jpg" />
     <link rel="apple-touch-icon" href="./logo.jpg" />
     <style>
@@ -52,7 +58,7 @@
     </style>
     <script type="module" crossorigin src="./assets/index.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index.css">
-  </head>
+  <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
   <body>
     <div id="splash-screen">
       <img src="./logo.jpg" alt="シフトントン" />
@@ -63,4 +69,3 @@
     <div id="root"></div>
   </body>
 </html>
-
