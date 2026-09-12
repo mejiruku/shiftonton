@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>シフトントン — インストール</title>
+  <title>シフトントン</title>
   <link rel="icon" type="image/jpeg" href="./logo.jpg" />
   <link rel="apple-touch-icon" href="./logo.jpg" />
   <style>
@@ -37,5 +37,11 @@
 <body>
   <img src="./logo.jpg" alt="シフトントン" />
   <h1>シフトントンをインストール</h1>
+  <script>
+    // ホーム画面から起動された場合（PWAとして開かれた場合）はメイン画面へリダイレクト
+    if (window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches) {
+      window.location.replace('./');
+    }
+  </script>
 </body>
 </html>
